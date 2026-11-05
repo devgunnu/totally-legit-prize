@@ -90,16 +90,38 @@ document.querySelectorAll('.ad').forEach(a=>a.onclick=()=>{ram+=8;ramEl.textCont
 ads.push('🐏 RAM SHORTAGE!! Sam Altman bought it all. Buy 1 stick, get 0 free','🤖 Sam Altman liked your RAM. Sam Altman is now holding your RAM','💾 ur computer is running on 3 hamsters and hope');
 
 const memes=[
- {img:'img/grimace.webp',title:'CNBC_Interview.exe',cap:'Reporter: "So where did all the RAM go?"\nSam:',btns:['🫣 uhhh','next question']},
- {img:'img/shrug.webp',title:'RAM_Explanation.ppt',cap:'"You see, consumers simply don\'t NEED 32GB. The datacenter needs it more. 🤷"',btns:['but my Chrome tabs!!','fair enough i guess']},
- {img:'img/jesus.jpg',title:'BLESSING_RECEIVED.exe',cap:'✨ St. Altman, Patron Saint of AGI ✨\nBlessed are the RAM-less, for they shall rent from the cloud 🙏',btns:['🙏 Amen','give back my DIMMs']},
- {img:'img/firefighter.jpg',title:'OpenAI_2026_Calendar.exe',cap:'🔥 Mr. December 🔥\n"I\'m here to put out the fire... in your RAM slots." 🚒🎄',btns:['🚒 take my RAM','call the real fire dept']},
- {img:'img/headshot.jpg',title:'LinkedIn_Notification',cap:'Sam Altman wants to connect 🤝\n"Hey! Quick question about your RAM sticks 🙂"',btns:['Accept (lose RAM)','Ignore (lose RAM anyway)']}
+ {img:'img/grimace.webp',caps:[
+  {t:'CNBC_Interview.exe',c:'Reporter: "So where did all the RAM go?"\nSam:',b:['🫣 uhhh','next question']},
+  {t:'Live_TV.exe',c:'"Did you just buy 40% of the world\'s DRAM?"\nSam:',b:['😬 allegedly','no comment']},
+  {t:'Mom_Is_Calling.exe',c:'Mom: "Why is the family PC so slow??"\nSam, holding 64GB behind his back:',b:['🫠 dunno','must be the wifi']},
+  {t:'Board_Meeting.ppt',c:'Board: "Wait, you were CEO again??"\nSam:',b:['it\'s complicated','👀 fired & rehired']}]},
+ {img:'img/shrug.webp',caps:[
+  {t:'RAM_Explanation.ppt',c:'"You see, consumers simply don\'t NEED 32GB. The datacenter needs it more. 🤷"',b:['but my Chrome tabs!!','fair enough i guess']},
+  {t:'TED_Talk_2026.mp4',c:'"AGI is coming. Your 8GB laptop is not." 🤷',b:['bro what','👏 clap anyway']},
+  {t:'Keynote.exe',c:'"Who needs to OWN a computer when you can SUBSCRIBE to one?" 🤷',b:['me??','💸 take my money']},
+  {t:'Q&A_Session.exe',c:'"Prices went up 900% because… *gestures vaguely* …demand." 🤷',b:['economics 101','🐏 RIP RAM']}]},
+ {img:'img/jesus.jpg',caps:[
+  {t:'BLESSING_RECEIVED.exe',c:'✨ St. Altman, Patron Saint of AGI ✨\nBlessed are the RAM-less, for they shall rent from the cloud 🙏',b:['🙏 Amen','give back my DIMMs']},
+  {t:'Sermon_On_The_Server.mp3',c:'"Take, eat. This is my GPU, which is rented for you." 🙏',b:['🙏 Amen','that\'s $20/mo']},
+  {t:'Miracle.exe',c:'He turned your 32GB into 0GB.\nThe datacenter into 5 gigawatts.\nTruly a miracle ✨',b:['🙌 hallelujah','i want a refund']},
+  {t:'Commandments.txt',c:'Thou shalt not upgrade thy own RAM.\nThou shalt not covet thy neighbor\'s H100. 📜',b:['🙏 obey','commit RAM sin']}]},
+ {img:'img/headshot.jpg',caps:[
+  {t:'LinkedIn_Notification',c:'Sam Altman wants to connect 🤝\n"Hey! Quick question about your RAM sticks 🙂"',b:['Accept (lose RAM)','Ignore (lose RAM anyway)']},
+  {t:'Tinder_Match.exe',c:'It\'s a match! 💘\nSam: "so… how much RAM you working with? 😏"',b:['16GB 😳','unmatch']},
+  {t:'Apology_Email.eml',c:'"We hear your feedback about RAM prices and we\'re going to do better 🙂"\n(they did not do better)',b:['😐 sure','unsubscribe']},
+  {t:'Totally_Normal_Selfie.jpg',c:'POV: the last thing your RAM sees before it vanishes 🙂',b:['🏃 run','say goodbye']}]}
 ];
-function memePop(){const m=memes[Math.random()*memes.length|0];const d=document.createElement('div');d.className='meme';d.style.left=Math.random()*(innerWidth-320)+'px';d.style.top=Math.random()*Math.max(10,innerHeight-420)+'px';
-d.innerHTML='<div class="tb"><span>'+m.title+'</span><span class="x" style="cursor:pointer">✕</span></div><img src="'+m.img+'"><div class="cap"></div><div style="text-align:center"></div>';d.querySelector('.cap').innerText=m.cap;
-const bx=d.lastChild;m.btns.forEach(b=>{const e=document.createElement('button');e.textContent=b;e.onclick=()=>{d.remove();ram=Math.max(0.1,ram-2);ramEl.textContent=ram.toFixed(1);beep(150,.2)};bx.appendChild(e)});
-d.querySelector('.x').onclick=()=>{d.remove();beep(300);if(Math.random()<.5)setTimeout(memePop,500)};document.body.appendChild(d);beep(500,.15)}
+const rare={img:'img/firefighter.jpg',caps:[
+  {t:'✨RARE DROP✨ OpenAI_2026_Calendar.exe',c:'🔥 Mr. December 🔥\n"I\'m here to put out the fire... in your RAM slots." 🚒🎄',b:['🚒 take my RAM','call the real fire dept']},
+  {t:'✨RARE DROP✨ 911_Call.wav',c:'"911 what\'s your emergency?"\n"My RAM is on fire"\n*he arrives shirtless* 🚒',b:['🔥 this is fine','hang up']},
+  {t:'✨RARE DROP✨ Holiday_Special.exe',c:'All I want for Christmas is youuu… r RAM 🎄🎶',b:['🎁 gift it','bah humbug']},
+  {t:'✨RARE DROP✨ Hot_Singles.exe',c:'🔥 HOT RAM THIEF IN YOUR AREA 🔥\nHe\'s 0.3 miles away and wants your DDR5',b:['😳 send location','block']}]};
+let lastMeme=-1;
+function pickMeme(){if(Math.random()<.1)return rare;let i;do{i=Math.random()*memes.length|0}while(i===lastMeme);lastMeme=i;return memes[i]}
+function memePop(){const m=pickMeme();m.n=(m.n===undefined?Math.random()*4|0:(m.n+1)%m.caps.length);const k=m.caps[m.n];const d=document.createElement('div');d.className='meme';if(m===rare){d.style.border='5px solid gold';d.style.boxShadow='0 0 30px gold'}d.style.left=Math.random()*(innerWidth-320)+'px';d.style.top=Math.random()*Math.max(10,innerHeight-420)+'px';
+d.innerHTML='<div class="tb"><span></span><span class="x" style="cursor:pointer">✕</span></div><img src="'+m.img+'"><div class="cap"></div><div style="text-align:center"></div>';d.querySelector('.tb span').textContent=k.t;d.querySelector('.cap').innerText=k.c;
+const bx=d.lastChild;k.b.forEach(b=>{const e=document.createElement('button');e.textContent=b;e.onclick=()=>{d.remove();ram=Math.max(0.1,ram-2);ramEl.textContent=ram.toFixed(1);beep(150,.2)};bx.appendChild(e)});
+d.querySelector('.x').onclick=()=>{d.remove();beep(300);if(Math.random()<.5)setTimeout(memePop,500)};document.body.appendChild(d);if(m===rare){beep(1500,.1);setTimeout(()=>beep(2000,.2),120)}else beep(500,.15)}
 setTimeout(memePop,6000);setInterval(()=>{if(document.querySelectorAll('.meme').length<3)memePop()},9000);
 const samImgs=['img/headshot.jpg','img/grimace.webp','img/shrug.webp','img/jesus.jpg'];
 </script></body></html>
