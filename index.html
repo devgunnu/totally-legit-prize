@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>!!! U HAVE WON !!! - FREE PRIZE CLAIM CENTER 2000</title>
+<style>
+body{background:#000080 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"><text x="10" y="40" font-size="30">⭐</text></svg>');color:#ff0;font-family:"Comic Sans MS","Comic Sans",cursive;margin:0;overflow-x:hidden;cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><text y="26" font-size="26">💰</text></svg>'),auto}
+.marq{background:#f0f;color:#0f0;font-size:22px;font-weight:bold;white-space:nowrap;overflow:hidden;border:4px ridge #ff0}
+.marq span{display:inline-block;padding-left:100%;animation:m 12s linear infinite}
+@keyframes m{to{transform:translateX(-100%)}}
+.blink{animation:b .5s steps(1) infinite}@keyframes b{50%{visibility:hidden}}
+.rainbow{animation:r 1s linear infinite;font-size:clamp(28px,7vw,60px);text-align:center;text-shadow:3px 3px #000}
+@keyframes r{0%{color:red}20%{color:orange}40%{color:yellow}60%{color:lime}80%{color:cyan}100%{color:magenta}}
+.box{background:#c0c0c0;color:#000;border:4px outset #fff;max-width:520px;margin:20px auto;padding:0;font-family:Tahoma,sans-serif}
+.tb{background:linear-gradient(90deg,#000080,#1084d0);color:#fff;padding:4px 8px;font-weight:bold;display:flex;justify-content:space-between}
+.in{padding:14px}
+button.big{font-size:26px;font-family:inherit;padding:14px 26px;background:#0f0;border:5px outset #0f0;cursor:pointer;animation:w .3s infinite alternate;position:relative}
+@keyframes w{from{transform:rotate(-3deg)}to{transform:rotate(3deg) scale(1.08)}}
+.c{text-align:center}table{margin:auto}
+#counter{font-family:monospace;background:#000;color:#0f0;padding:2px 6px;border:2px inset #888}
+.spin{display:inline-block;animation:s 2s linear infinite}@keyframes s{to{transform:rotate(360deg)}}
+.pop{position:fixed;z-index:50}
+#prog{height:24px;background:#fff;border:2px inset #888}#bar{height:100%;width:0;background:repeating-linear-gradient(90deg,#000080 0 12px,#fff 12px 14px)}
+.hidden{display:none}
+#final{position:fixed;inset:0;background:#000;color:#0f0;font-family:monospace;z-index:999;padding:30px;font-size:18px;overflow:auto}
+.trail{position:fixed;pointer-events:none;z-index:998;font-size:18px;animation:f 1s forwards}@keyframes f{to{opacity:0;transform:translateY(30px)}}
+</style></head><body>
+<div class="marq"><span>🎉 CONGRATULATIONS!!! YOU ARE THE 1,000,000th VISITOR!!! 🎉 CLAIM UR FREE IPOD NANO + 1 BILLION BITCOINS + A PONY 🐴 ACT NOW!!! OFFER EXPIRES IN 00:00:03 (ALWAYS) 🎉 100% LEGIT NOT A SCAM 🔒 VERIFIED BY THE GOVERNMENT OF THE INTERNET 🎉</span></div>
+<h1 class="rainbow"><span class="spin">💸</span> U HAVE WON!!! <span class="spin">💸</span></h1>
+<p class="c blink" style="font-size:24px;color:#f00;background:#ff0">⚠️ DO NOT CLOSE THIS WINDOW OR UR PRIZE WILL EXPLODE ⚠️</p>
+<p class="c">You are visitor # <span id="counter">0000000</span> &nbsp; <img alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='88' height='31' fill='%23000'/><text x='4' y='20' fill='%230f0' font-size='10' font-family='monospace'>NETSCAPE NOW!</text></svg>"></p>
+<div class="box"><div class="tb"><span>🏆 PrizeClaim.exe</span><span>_ □ ✕</span></div><div class="in">
+<p><b>Dear Valued Winner (that's u),</b></p>
+<p>Our 100% REAL computer has selected YOU at random from ALL of the internet. Just click below to verify you are a human and not a cat.</p>
+<p class="c"><button class="big" id="claim">💰 CLAIM PRIZE 💰</button></p>
+<p style="font-size:11px">*By clicking you agree to be pranked. No data is collected. This site has no forms that send anything anywhere. It's a joke!!</p>
+</div></div>
+<table cellpadding="6" border="3" bgcolor="#800080"><tr><td>🔥 HOT DEALS 🔥</td><td><a href="#" style="color:#0ff" onclick="alert('lol no');return false">FREE RAM DOWNLOAD</a></td><td><a href="#" style="color:#0ff" onclick="alert('ur RAM is now 1 GB bigger (trust)');return false">MORE RAM</a></td></tr></table>
+<p class="c"><span class="blink">🚧</span> UNDER CONSTRUCTION <span class="blink">🚧</span><br><small>Best viewed in Netscape Navigator 4.0 @ 800x600 | Sign my GuestBook!</small></p>
+
+<div id="stage2" class="box hidden"><div class="tb"><span>🔐 SuperSecure Verification Wizard 98</span><span>✕</span></div><div class="in">
+<p id="q">Step 1 of 47: Please verify you are human. Click the button. If you can.</p>
+<p class="c"><button class="big" id="run">I AM HUMAN</button></p>
+<div id="prog"><div id="bar"></div></div><p id="status" style="font-size:12px">Waiting...</p>
+</div></div>
+
+<div id="final" class="hidden"></div>
+<script>
+// harmless prank: no inputs, no network requests
+let n=Math.floor(Math.random()*9e6);const ctr=document.getElementById('counter');
+setInterval(()=>{n+=Math.floor(Math.random()*500);ctr.textContent=String(n).padStart(7,'0')},120);
+document.title.split('');let t=0;setInterval(()=>{document.title=(t++%2?'💰 ':'🚨 ')+'U HAVE WON!!! CLAIM NOW';},700);
+addEventListener('mousemove',e=>{if(Math.random()>.3)return;const s=document.createElement('div');s.className='trail';s.textContent=['✨','💲','⭐','🍕'][Math.random()*4|0];s.style.left=e.clientX+'px';s.style.top=e.clientY+'px';document.body.appendChild(s);setTimeout(()=>s.remove(),1000)});
+function beep(f=880,d=.12){try{const a=window._ac||(window._ac=new AudioContext()),o=a.createOscillator(),g=a.createGain();o.type='square';o.frequency.value=f;g.gain.value=.05;o.connect(g);g.connect(a.destination);o.start();o.stop(a.currentTime+d)}catch(e){}}
+const ads=['🎰 HOT SINGLES IN YOUR AREA WANT TO TALK ABOUT PIZZA','⚠️ YOUR PC HAS 9,001 VIRUSES (we counted)','🐴 Your pony is ready for pickup','📞 Nigerian prince on line 2','💾 Download Bonzi Buddy 2.0 now?','🧮 Mom found the clicking secret. Doctors HATE her'];
+function popup(){const d=document.createElement('div');d.className='box pop';d.style.width='260px';d.style.left=Math.random()*(innerWidth-270)+'px';d.style.top=Math.random()*(innerHeight-140)+'px';d.innerHTML='<div class="tb"><span>Alert!!</span><span class="x" style="cursor:pointer">✕</span></div><div class="in">'+ads[Math.random()*ads.length|0]+'</div>';d.querySelector('.x').onclick=()=>{d.remove();beep(300);if(Math.random()<.5){popup();popup()}};document.body.appendChild(d);beep(1200)}
+setInterval(()=>{if(document.querySelectorAll('.pop').length<6)popup()},4000);
+document.getElementById('claim').onclick=()=>{beep();document.getElementById('stage2').classList.remove('hidden');document.getElementById('stage2').scrollIntoView({behavior:'smooth'})};
+const run=document.getElementById('run');let dodges=0;
+run.addEventListener('mouseenter',()=>{if(dodges<6){dodges++;run.style.left=(Math.random()*240-120)+'px';run.style.top=(Math.random()*80-40)+'px';beep(600+dodges*100);document.getElementById('status').textContent=['Too slow!','Nope!','Almost!','lol','u call that human?','ok fine, last try'][dodges-1]}});
+run.onclick=()=>{let p=0;const bar=document.getElementById('bar'),st=document.getElementById('status');const msgs=['Contacting Nigerian prince...','Downloading more RAM...','Reticulating splines...','Asking ur mom for permission...','Converting prize to Bitcoin...','Feeding the hamster...','Almost there... 99%... 98%...?'];
+const iv=setInterval(()=>{p+=Math.random()*9;if(p>92&&p<99)p-=12;bar.style.width=Math.min(p,100)+'%';st.textContent=msgs[Math.random()*msgs.length|0]+' '+Math.floor(Math.min(p,100))+'%';beep(200+p*8,.05);if(p>=100){clearInterval(iv);finale()}},300)};
+function finale(){const f=document.getElementById('final');f.classList.remove('hidden');const lines=['C:\\> HACKING INTO MAINFRAME...','C:\\> bypassing firewall.......... OK','C:\\> stealing ur cookies 🍪.... jk','C:\\> locating prize...','C:\\> prize not found',' ','','🎣 YOU GOT PHISHED!!! 🎣',' ','(not really. nothing was collected. this is a prank.)',' ','But seriously: real phishing sites look JUST like this — "u won", fake urgency, countdowns,','"verify you are human", popups. Never enter passwords or card info on a site like this.',' ','Check the URL. Don\'t trust prizes. Stay safe out there. 🍕',' ','Made for Claude Club in ONE prompt.','[ press any key to get pranked again ]'];
+let i=0;const iv=setInterval(()=>{if(i>=lines.length){clearInterval(iv);addEventListener('keydown',()=>location.reload());f.onclick=()=>location.reload();return}const p=document.createElement('div');p.textContent=lines[i];if(lines[i].includes('PHISHED'))p.className='rainbow';f.appendChild(p);beep(1000+i*40,.04);i++},350)}
+</script></body></html>
